@@ -1,0 +1,44 @@
+
+<div class="container">
+    <br>
+<H1>Welcome :) {{usernameFromLogin}}.</H1>
+    <!-- Current Medicine Status<a routerLink="/listMedicineAvailable"> here</a> -->
+</div>
+<br>
+<br>
+<!-- <div class="container">
+    Click here to get the total count of medicines in inventory
+    <button (click)="getWelcomeMessageWithParam()" class="btn btn-success">Get Count</button>
+</div>
+<br>
+<div class="container" *ngIf="responseMessage">
+    <H2>The message from backend</H2>
+    {{responseMessage}}
+</div> -->
+
+<h1 class="head">VACCINE TEMPERATURE MONITORING USING WIRELESS SENSOR NETWORK</h1>
+<p class="content">Vaccines are biological product which is able to lose their potency if exposed to excessive heat and/or freeze. 
+    Totally different vaccines have different sensitivity to freeze and heat; 
+    it’s as a results of this development that looking the temperature of vaccines throughout storage and transportation is important.
+     Temp monitoring devices are needed to remain track of the temperature thereto the vaccines and diluents are exposed. 
+     Supported that info from these devices; necessary decisions may be created. 
+     This includes victimization the immunization agent if the temperature is within the counselled excursion vary, 
+     conducting a shake check if freeze is suspected or discarding the vaccine. 
+     Temperature looking devices are used from purpose of dispatch of vaccines to the aim of use. </p>
+<div class="Level">
+    <div class="stats">
+        <h5 class="heading" style="color: rgba(255,7,58,.6)">Total No Machines</h5>
+        <h1 style="color: #ff073a;    text-align: center;">3 </h1>
+    </div>
+    <div class="stats1">
+        <h5 class="heading" style="color:rgba(40,167,69,.6)">Active Medicines</h5>
+        <h1 style="color:#28a745;     text-align: center;">{{responseMessage}}</h1>
+        <button (click)="open()"class ="btn btn-success">Open ></button>
+    </div>
+    <div class="stats2">
+        <h5 class="heading" style="color:rgba(0,123,255,.6)">Offline</h5>
+        <h1 style="color:#007bff;     text-align: center;">1</h1>
+    </div>
+</div>
+
+  

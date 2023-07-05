@@ -1,0 +1,30 @@
+<div style ="overflow-y:hidden; overflow-x:hidden; height:800px;">
+<div class="chart-container">
+  <br>
+  <br>
+  <canvas  id="MyChart" >{{ chart }}</canvas>
+</div>
+<br>
+<div class="alert alert-warning"  *ngIf='dataAvailable'>
+  {{errorMessage}} {{medicineName}}
+</div>
+<div class="Level">
+<div *ngIf='!userView' class ="stats" >
+  <h5 class="heading" style="color: rgba(255,7,58,.6)">Current Temperature</h5>
+  <h1 style="color: #ff073a;    text-align: center;">{{currentTemp}} </h1>
+</div>
+
+<div *ngIf='!userView || postiveResponseMessage' class="stats1" >
+  {{postiveResponseMessage}}
+  <h5 class="heading" style="color:rgba(40,167,69,.6)">Update Temperature</h5>
+  <input type="number" [(ngModel)] = "medicineById.setTemp" class ="form-control" name = "setTemp" required ="required">
+  <button (click)="setTempF()"class ="btn btn-success">Set Tempeature></button>
+</div>
+<div  style= " text-align: center;" class="stats2">
+  <button (click)="getBack()" class="btn btn-success">Back</button>
+</div>
+</div>
+
+<br>
+
+</div>

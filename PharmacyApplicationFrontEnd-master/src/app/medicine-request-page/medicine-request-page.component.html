@@ -1,0 +1,30 @@
+<h1>Medicine Request List</h1>
+<br>
+<div class="container" style="overflow-y:auto;  height:550px;">
+  <table class="table">
+    <thead>
+      <tr style=" top: 0; position: sticky; background: #ffffff; color: black;">
+        <th>Medicine Name</th>
+        <th>Description</th>
+        <th>Ordered By</th>
+        <th>Deliverable</th>
+        <th>Verified Account</th>
+        <th>Reject Request</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let availableMedicine of availableMedicineLists">
+        <td>{{availableMedicine.medicineName}}</td>
+        <td>{{availableMedicine.description}}</td>
+        <td>User</td>
+        <td>{{availableMedicine.deliverable}}</td>
+        <td>Verified</td>
+        <td><button (click)="resetOrderStatus(availableMedicine.id)" class ="btn btn-warning">Reject</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <div  style= " text-align: center;" class="stats2">
+    <button (click)="getBack()" class="btn btn-success">Back</button>
+  </div>
+</div>
+

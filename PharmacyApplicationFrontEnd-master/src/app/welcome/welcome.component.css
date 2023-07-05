@@ -1,0 +1,73 @@
+.container {
+    font-size: 18px;
+}
+.about-section {
+    padding: 50px;
+    text-align: center;
+    color: black;
+  }
+
+  h1 {
+    font-family: 'archia';
+    font-size: 24px !important;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  h5 {
+    font-family: 'archia';
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  .Level {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    width: 45rem;
+  
+  }
+
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    flex-direction: row;
+    height: 0.9rem;
+    align-items: center;
+  }
+  .content {
+    font-size: 19px;
+  }
+.head{
+    font-size: 30px !important;
+}
+
+.btn{
+    width: 65px !important;
+    height: 30px !important;
+    padding: .0rem .0rem;
+    margin-left: 75px;
+}
+.stats{
+  background: rgba(255,7,58,.12549);
+    border-radius: 5px;
+    padding: .5rem;
+    width: 240px;
+    margin-left: .25rem;
+    margin-right: .25rem;
+    margin-bottom: .5rem;
+}
+.stats1{
+  background: rgba(40,167,69,0.13);
+    border-radius: 5px;
+    padding: .5rem;
+    width: 240px;
+    
+}
+.stats2{
+  background: rgba(0,123,255,0.06);
+    border-radius: 5px;
+    padding: .5rem;
+    width: 240px; 
+    margin-right: -155px;
+}

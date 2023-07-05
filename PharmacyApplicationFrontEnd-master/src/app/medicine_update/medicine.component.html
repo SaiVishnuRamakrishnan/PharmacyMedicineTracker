@@ -1,0 +1,29 @@
+<H1>Update Medicine Details</H1>
+<div class="container">
+  <div class="alert alert-warning" *ngIf="medicineForm.dirty && medicineForm.invalid">Enter Valid Values</div>
+  <div class="alert alert-warning" *ngIf="medicineForm.dirty && deliverableDate.invalid">Enter Valid Date</div>
+  <div class="alert alert-warning" *ngIf="medicineForm.dirty && deliverableDate.invalid">Enter True or False</div>
+  <form (ngSubmit)="!medicineForm.invalid && saveMedicine()" #medicineForm="ngForm">
+    <fieldset class="form-group">
+      <label>Medicine Name</label>
+      <input type="text" [(ngModel)] = "medicineById.medicineName" class ="form-control" name = "medicineName" required ="required">
+    </fieldset>
+    <fieldset class="form-group">
+      <label>Description</label>
+      <input type="text" [(ngModel)] = "medicineById.description" class ="form-control" name = "description" required ="required">
+    </fieldset>
+    <fieldset class="form-group">
+      <label>Approximate Deliverable Date</label>
+      <input type="date" 
+                        [ngModel] = "medicineById.targetDate | date:'yyyy-MM-dd' " 
+                        (ngModelChange) = "medicineById.targetDate = $event"
+                        class ="form-control" name = "targetDate" #deliverableDate="ngModel" required ="required">
+    </fieldset>
+    <fieldset>
+        <label>Deliverable Status</label>
+        <input pattern="true|false"type="text" [(ngModel)] = "medicineById.deliverable" class ="form-control" name = "deliverable" required ="required">     
+    </fieldset>
+    <br>
+    <button type="submit" class="btn btn-success">Save</button>
+  </form>
+</div>

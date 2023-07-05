@@ -1,0 +1,7 @@
+.navbar {
+    background-color: rgb(208,189,244);
+  }
+  
+  .navbar .navbar-brand, .navbar .navbar-nav .nav-link {
+    color: black;
+  }

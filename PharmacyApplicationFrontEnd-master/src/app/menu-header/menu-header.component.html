@@ -1,0 +1,57 @@
+<!-- <header>
+  <nav class="navbar navbar-expand-lg navbar-light mask-custom shadow-0"  style="background-color: #e3f2fd;"> 
+    <div><a href="" class="navbar-brand">Pharmacy Medicine Tracking System</a></div>
+
+    <ul class="navbar-nav">
+      <li><a *ngIf="authenticationService.isSessionLive()" routerLink="welcome/admin" class="nav-link">Home</a></li>
+      <li><a *ngIf="authenticationService.isSessionLive()" routerLink="listMedicineAvailable" class="nav-link">Medicine List</a></li>
+    </ul>
+    
+    <ul  class="navbar-nav navbar-collapse justify-content-end">
+      <li><a *ngIf="!authenticationService.isSessionLive()" routerLink="/login" class="nav-link">Login</a></li>
+      <li><a *ngIf="authenticationService.isSessionLive()" routerLink="/logout" class="nav-link">Logout</a></li>
+    </ul>
+  </nav>
+</header> -->
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">Medicine Tracking System</a>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" *ngIf="authenticationService.isAdminSessionLive()" 
+          routerLink="welcome/admin" class="nav-link">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a *ngIf="authenticationService.isAdminSessionLive()" routerLink="listMedicineAvailable" class="nav-link">Medicine List</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf="authenticationService.isAdminSessionLive()" routerLink="listMedicineAvailable" class="nav-link">Temparature Alert</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf="authenticationService.isAdminSessionLive()" routerLink="medicineRequest" class="nav-link">Medicine Request</a>
+        </li>
+
+        
+        <!-- For User -->
+        <li class="nav-item">
+          <a *ngIf="authenticateUserService.isUserSessionLive()" routerLink="listMedicineAvailable" class="nav-link"> Request For Medicine</a>
+        </li>
+        </ul>
+
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+        <li class="nav-item" ><a *ngIf="authenticationService.isAdminSessionLive()" routerLink="/aboutUS" class="nav-link">About Us</a></li>
+        <li class="nav-item" ><a *ngIf="!authenticationService.isAdminSessionLive()
+          && !authenticateUserService.isUserSessionLive()" routerLink="/login" class="nav-link">Login</a></li>
+        <li class="nav-item" ><a *ngIf="authenticationService.isAdminSessionLive()" routerLink="/logout" class="nav-link">Logout</a></li>
+
+        <!-- For User -->
+        <!-- <li class="nav-item" ><a *ngIf="!authenticateUserService.isUserSessionLive()" routerLink="/login" class="nav-link">Login</a></li> -->
+        <li class="nav-item" ><a *ngIf="authenticateUserService.isUserSessionLive()" routerLink="/logout" class="nav-link">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

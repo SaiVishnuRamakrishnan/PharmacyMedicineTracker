@@ -1,0 +1,31 @@
+.stats{
+    background: rgba(255,7,58,.12549);
+      border-radius: 5px;
+      padding: .5rem;
+      width: 240px;
+      margin-left: .25rem;
+      margin-right: .25rem;
+      margin-bottom: .5rem;
+      text-align: center
+  }
+
+  .stats1{
+    background: rgba(40,167,69,0.13);
+      border-radius: 5px;
+      padding: .5rem;
+      width: 240px;
+      text-align: center
+      
+  }
+  .stats2{
+margin-top: 40px;
+      margin-right: -155px;
+  }
+  .Level {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    width: 40rem;
+  
+  }
